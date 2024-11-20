@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceiro Exemplo</title>
+    <style>
+        body {font: 10pt Arial;}
+        button {font-size: 15pt; padding: 20px;}
+        #mensagem {margin-top: 20px; font-size: 12pt;}
+    </style>
+</head>
+<body>
+    <h1>Calculadora de dobro e a metade</h1>
+    <button onclick="calcular()">Clique aqui para calcular</button>
+    <section id="res">
+        <p>Resultado da operação</p>
+    </section>
+    </body>
+
+    <script>
+       function calcular() {
+        let numero = Number(window.prompt('Digite um número'));
+        let res = document.querySelector('section#res');
+
+        res.innerHTML = `<p>O numero é : ${numero} , seu dobro é : ${numero*2} e a metade é ${numero/2}`;
+       }
+    </script>
+    
+    </html>

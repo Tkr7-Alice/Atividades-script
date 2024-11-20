@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceiro Exemplo</title>
+    <style>
+        body {font: 10pt Arial;}
+        button {font-size: 15pt; padding: 20px;}
+        #mensagem {margin-top: 20px; font-size: 12pt;}
+    </style>
+</head>
+<body>
+    
+    <script>
+        function inicio() {
+            let nome = window.prompt('Qual é o seu nome?');
+            let res = window.document.getElementById('resultado');
+
+            res.innerHTML = 'Olá, <strong>${nome}</strong>! É um grande prazer!';
+        }
+    </script>

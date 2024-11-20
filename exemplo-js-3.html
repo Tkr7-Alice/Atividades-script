@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceiro Exemplo</title>
+    <style>
+        body {font: 10pt Arial;}
+        button {font-size: 15pt; padding: 20px;}
+        #mensagem {margin-top: 20px; font-size: 12pt;}
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados 2.0</h1>
+    <button onclick="clicou()">Clique em mim</button>
+    <div id="mensagem">
+        <p>Aqui vai aparecer o resultado</p>
+    </div>
+</body>
+<script>
+    function clicou() {
+        const nome = prompt('Clique em mim');
+        if (nome) {
+            document.getElementById('mensagem').textContent = `Olá, ${nome}! É um grande prazer te conhecer! `; 
+        } else {
+            document.getElementById('mensagem').textContent = 'Você clicou no botão, mas não digitou um nome.';
+        }
+    }
+</script>
+</html>

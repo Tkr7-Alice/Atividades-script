@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceiro Exemplo</title>
+    <style>
+        body {font: 10pt Arial;}
+        button {font-size: 15pt; padding: 20px;}
+        #mensagem {margin-top: 20px; font-size: 12pt;}
+    </style>
+</head>
+<body>
+    <h1>Soma dos números</h1>
+    <button onclick="calcular()">Clique em mim</button>
+    <section id="res">
+        <p>Aqui vai aparecer o resultado</p>
+    </section>
+</body>
+<script>
+    function calcular(){
+        let numero1 = Number(prompt('digite um numero!'));
+        let numero2 = Number(prompt('Digite outro numero!'));
+        let res = window.document.getElementById('res');
+
+        res.innerHTML = `<p>A soma dos números é ${numero1 + numero2}</p>`
+     }
+</script>

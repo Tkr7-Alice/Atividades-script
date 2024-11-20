@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações Matemáticas</title>
+</head>
+<body>
+    <h2>Digite um número:</h2>
+    <input type="number" id="numero" step="any">
+    <button onclick="mostrarResultados()">Calcular</button>
+    <div id="resultados"></div>
+
+    <script>
+        function mostrarResultados() {
+            let num = parseFloat(document.getElementById('numero').value);
+            if (isNaN(num)) {
+                document.getElementById('resultados').innerHTML = "<p>Digite um número válido.</p>";
+                return;
+            }
+
+            let resultados = `
+                <p>Valor absoluto: ${Math.abs(num)}</p>
+                <p>Parte inteira: ${Math.trunc(num)}</p>
+                <p>Valor inteiro mais próximo: ${Math.round(num)}</p>
+                <p>Raiz quadrada: ${Math.sqrt(num).toFixed(2)}</p>
+                <p>Raiz cúbica: ${Math.cbrt(num).toFixed(2)}</p>
+                <p>Número elevado ao quadrado: ${Math.pow(num, 2)}</p>
+                <p>Número elevado ao cubo: ${Math.pow(num, 3)}</p>
+            `;
+
+            document.getElementById('resultados').innerHTML = resultados;
+        }
+    </script>
+</body>
+</html>
